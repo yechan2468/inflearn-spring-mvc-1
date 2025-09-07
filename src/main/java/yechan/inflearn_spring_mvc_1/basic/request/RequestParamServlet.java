@@ -15,8 +15,6 @@ public class RequestParamServlet extends HttpServlet {
                 .forEachRemaining(name -> System.out.println(name + " " + request.getParameter(name)));
     }
     /*
-    GET /request-param?username=yechan&age=20
-
     username yechan
     age 20
      */
