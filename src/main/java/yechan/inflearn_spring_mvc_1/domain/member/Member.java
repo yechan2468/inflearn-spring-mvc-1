@@ -1,4 +1,4 @@
-package yechan.inflearn_spring_mvc_1.domain;
+package yechan.inflearn_spring_mvc_1.domain.member;
 
 import lombok.Getter;
 import lombok.Setter;

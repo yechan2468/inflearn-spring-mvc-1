@@ -2,6 +2,8 @@ package yechan.inflearn_spring_mvc_1.domain;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
+import yechan.inflearn_spring_mvc_1.domain.member.Member;
+import yechan.inflearn_spring_mvc_1.domain.member.MemberRepository;
 
 import java.util.List;
 
