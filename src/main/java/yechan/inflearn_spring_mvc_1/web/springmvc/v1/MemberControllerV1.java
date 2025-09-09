@@ -1,4 +1,4 @@
-package yechan.inflearn_spring_mvc_1.web.springmvc.v1.controller;
+package yechan.inflearn_spring_mvc_1.web.springmvc.v1;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
