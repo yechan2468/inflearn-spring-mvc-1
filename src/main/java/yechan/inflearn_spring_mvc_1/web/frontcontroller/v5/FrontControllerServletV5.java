@@ -12,6 +12,7 @@ import yechan.inflearn_spring_mvc_1.web.frontcontroller.v3.controller.MemberForm
 import yechan.inflearn_spring_mvc_1.web.frontcontroller.v3.controller.MemberListControllerV3;
 import yechan.inflearn_spring_mvc_1.web.frontcontroller.v3.controller.MemberSaveControllerV3;
 import yechan.inflearn_spring_mvc_1.web.frontcontroller.v5.adapter.ControllerV3HandlerAdapter;
+import yechan.inflearn_spring_mvc_1.web.frontcontroller.v5.adapter.ControllerV4HandlerAdapter;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,8 +30,12 @@ public class FrontControllerServletV5 extends HttpServlet {
         handlerMap.put("/front-controller/v5/v3/members/new-form", new MemberFormControllerV3());
         handlerMap.put("/front-controller/v5/v3/members/save", new MemberSaveControllerV3());
         handlerMap.put("/front-controller/v5/v3/members", new MemberListControllerV3());
+        handlerMap.put("/front-controller/v5/v4/members/new-form", new MemberFormControllerV3());
+        handlerMap.put("/front-controller/v5/v4/members/save", new MemberSaveControllerV3());
+        handlerMap.put("/front-controller/v5/v4/members", new MemberListControllerV3());
 
         handlerAdapters.add(new ControllerV3HandlerAdapter());
+        handlerAdapters.add(new ControllerV4HandlerAdapter());
     }
 
     @Override
