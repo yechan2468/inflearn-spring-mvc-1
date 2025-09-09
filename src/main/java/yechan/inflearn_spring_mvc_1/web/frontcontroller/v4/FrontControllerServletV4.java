@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import yechan.inflearn_spring_mvc_1.web.frontcontroller.MyModel;
 import yechan.inflearn_spring_mvc_1.web.frontcontroller.MyView;
+import yechan.inflearn_spring_mvc_1.web.frontcontroller.util.Util;
 import yechan.inflearn_spring_mvc_1.web.frontcontroller.v4.controller.MemberFormControllerV4;
 import yechan.inflearn_spring_mvc_1.web.frontcontroller.v4.controller.MemberListControllerV4;
 import yechan.inflearn_spring_mvc_1.web.frontcontroller.v4.controller.MemberSaveControllerV4;
@@ -36,7 +37,7 @@ public class FrontControllerServletV4 extends HttpServlet {
             return;
         }
 
-        Map<String, String> params = getParams(request);
+        Map<String, String> params = Util.getParams(request);
 
         MyModel model = new MyModel();
         String viewName = controller.process(params, model);
@@ -48,13 +49,5 @@ public class FrontControllerServletV4 extends HttpServlet {
 
     private static MyView getView(String viewName) {
         return new MyView("/WEB-INF/views/" + viewName + ".jsp");
-    }
-
-    private static Map<String, String> getParams(HttpServletRequest request) {
-        Map<String, String> params = new HashMap<>();
-        request.getParameterNames().asIterator().forEachRemaining(
-                paramName -> params.put(paramName, request.getParameter(paramName))
-        );
-        return params;
     }
 }

@@ -3,10 +3,11 @@ package yechan.inflearn_spring_mvc_1.web.frontcontroller.v1;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import yechan.inflearn_spring_mvc_1.web.frontcontroller.MyController;
 
 import java.io.IOException;
 
-public interface ControllerV1 {
+public interface ControllerV1 extends MyController {
 
     void process(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException;
 }
